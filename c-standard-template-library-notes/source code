@@ -1,0 +1,76 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include<bits/stdc++.h> // this adds all the C++ libraries in a single step, we wouldn't have to import libraries one by one
+using namespace std; // if we use this, we wouldn't have to use std:: with cin & cout again & again
+
+// functions with return type void don't return anything & functions with some other return type return something
+// we can print using functions with return type void but we can't return using functions with return type void
+/*
+We can use the using directive to bring all the identifiers of the namespace std as if they were declared globally. 
+By doing this, we can:
+avoid using the std:: prefix 
+avoid utilizing the using declaration repeatedly
+
+we have used the using directive to bring all the identifiers of the std namespace to our program, including the string, cout, cin, and endl identifiers.
+
+Notes:
+
+The using declaration only brings the specified identifiers of the namespace into the current scope.
+The using directive brings all the identifiers of a namespace into the current scope.
+
+This is a using-directive which brings all the identifiers from the standard namespace to the current namespace. 
+If you utilize using namespace std, it may create ambiguity
+If you are using only a few names from the standard library, it is better to use using-declaration to selectively bring identifiers.
+*/
+// #include<library_name.h> : To add any C++ library e.g. #include<string.h> or #include<math.h>
+// #include<bits/stdc++.h> : To add all C++ libraries together at once
+/*
+In C++, a namespace is a collection of related names or identifiers (functions, class, variables) which helps to separate these identifiers from similar identifiers in other namespaces or the global namespace.
+
+The identifiers of the C++ standard library are defined in a namespace called std.
+
+In order to use any identifier belonging to the standard library, we need to specify that it belongs to the std namespace. 
+One way to do this is by using the scope resolution operator :: For example, std::cout << "Hello World!";
+
+Here, we have used the code std:: before cout. This tells the C++ compiler that the cout object we are using belongs to the std namespace.
+*/
+
+/*
+Since using namespace std brings all the identifiers from the std namespace into the global namespace, this can create naming conflicts with other namespaces. For instance, there may be other entities with the name cout other than the one in the std namespace.
+
+So if we are using that other namespace (with the other cout entity) along with the std namespace, then the compiler will not know which cout to use. As a result, we'll get an error whenever we use cout.
+
+// using namespace std; - Potential Professional Problems
+
+This is a using-directive which brings all the identifiers from the standard namespace to the current namespace. But the std namespace includes its own swap() function.
+
+So, the compiler is unable to determine which version of swap() to use: std::swap() or the custom function we have created.
+
+In order to avoid this error, we must remove the using namespace std; code from our program.
+
+Suppose you are working on a large program or project. Let's say you are using a library called swapLib which implements its own swap() function.
+
+If you utilize using namespace std, it may create ambiguity just like in our example i.e. whether to use swap() from the swapLib library or the standard namespace.
+
+Note: If you are using only a few names from the standard library, it is better to use using-declaration to selectively bring identifiers.
+*/
+/* 
+The cin object in C++ is an object of class iostream. It is used to accept the input from the standard input device i.e. keyboard. 
+It is associated with the standard C input stream stdin. The extraction operator(>>) is used along with the object cin for reading inputs. 
+The extraction operator extracts the data from the object cin which is entered using the keyboard.
+*/
+
+// C++ STL (Standard Template Library) is divided into 4 parts : Algorithms, Containers, Functions, Iterators
+
+int main()
+{
+    printf("Hello World");
+
+    return 0;
+}
